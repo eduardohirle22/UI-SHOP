@@ -6,7 +6,7 @@
 <title>Nóbel — Tudo em um lugar</title>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--primary:#002366;--primary-dark:#001A4D;--primary-light:#003399;--gold:#D4AF37;--gold-light:#F0D060;--neutral:#1A1C1E;--surface:#F5F6FA;--white:#FFFFFF;--gray-100:#F0F2F8;--gray-200:#E0E4EF;--gray-400:#9AA0B8;--gray-600:#5A6070;--success:#2A9D5C;--danger:#c0392b;--radius-sm:8px;--radius-md:16px;--shadow:0 2px 16px rgba(0,35,102,.10);--shadow-card:0 4px 24px rgba(0,35,102,.12);--font:'Lexend',sans-serif}
+:root{--primary:#002366;--primary-dark:#001A4D;--primary-light:#003399;--gold:#D4AF37;--gold-light:#F0D060;--neutral:#1A1C1E;--surface:#F5F6FA;--white:#FFFFFF;--gray-100:#F0F2F8;--gray-200:#E0E4EF;--gray-400:#566080;--gray-600:#3E4A5E;--success:#2A9D5C;--danger:#c0392b;--radius-sm:8px;--radius-md:16px;--shadow:0 2px 16px rgba(0,35,102,.10);--shadow-card:0 4px 24px rgba(0,35,102,.12);--font:'Lexend',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{font-family:var(--font);background:var(--surface);color:var(--neutral);height:100%;overflow:hidden;user-select:none}
 #app{max-width:393px;height:100dvh;margin:0 auto;background:var(--white);display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:0 0 40px rgba(0,0,0,.18)}
@@ -21,17 +21,17 @@ html,body{font-family:var(--font);background:var(--surface);color:var(--neutral)
 .logo-wrap{display:flex;align-items:center;gap:11px}
 .logo-mark{width:40px;height:40px;flex-shrink:0}
 .logo-name{font-size:21px;font-weight:700;color:var(--white);letter-spacing:3.5px;text-transform:uppercase}
-.logo-tagline{font-size:7.5px;font-weight:400;color:var(--gold);letter-spacing:3.5px;text-transform:uppercase;margin-top:3px}
+.logo-tagline{font-size:9px;font-weight:600;color:var(--gold);letter-spacing:3.5px;text-transform:uppercase;margin-top:3px}
 .hdr-icons{display:flex;gap:8px}
 .hdr-btn{background:rgba(255,255,255,.13);border:none;color:var(--white);width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative;transition:background .15s}
 .hdr-btn:active{background:rgba(255,255,255,.25)}
 .badge{position:absolute;top:-4px;right:-4px;background:var(--gold);color:var(--primary);font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;border:2px solid var(--primary-dark)}
-.header-greeting{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px}
+.header-greeting{font-size:12px;color:rgba(255,255,255,.92);margin-bottom:4px}
 .header-subtitle{font-size:21px;font-weight:700;color:var(--white);line-height:1.25;margin-bottom:18px}
 .header-subtitle span{color:var(--gold)}
 .hero-search{background:rgba(255,255,255,.14);border-radius:var(--radius-sm);display:flex;align-items:center;padding:11px 14px;gap:10px;margin-bottom:20px;position:relative}
 .hero-search input{background:none;border:none;outline:none;color:var(--white);font-family:var(--font);font-size:14px;width:100%}
-.hero-search input::placeholder{color:rgba(255,255,255,.45)}
+.hero-search input::placeholder{color:rgba(255,255,255,.72)}
 .search-clear{background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-size:16px;padding:0;display:none;flex-shrink:0}
 .suggestions-box{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--white);border-radius:var(--radius-sm);box-shadow:0 8px 32px rgba(0,0,0,.18);z-index:50;overflow:hidden;display:none}
 .suggestion-item{padding:12px 16px;font-size:13px;color:var(--neutral);cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--gray-100)}
@@ -241,7 +241,7 @@ html,body{font-family:var(--font);background:var(--surface);color:var(--neutral)
 .profile-hdr{background:linear-gradient(180deg,var(--primary) 55%,var(--surface) 55%);padding:32px 24px 0;display:flex;flex-direction:column;align-items:center;gap:12px}
 .profile-av{width:80px;height:80px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;border:4px solid var(--white);box-shadow:var(--shadow-card)}
 .profile-name{font-size:18px;font-weight:700;color:var(--white)}
-.profile-email{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:24px}
+.profile-email{font-size:13px;color:rgba(255,255,255,.92);margin-bottom:24px}
 .profile-menu{padding:16px;display:flex;flex-direction:column;gap:8px}
 .profile-item{background:var(--white);border-radius:var(--radius-md);padding:16px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow);cursor:pointer;transition:transform .1s}
 .profile-item:active{transform:scale(.98)}
@@ -317,178 +317,6 @@ input:checked+.slider:before{transform:translateX(20px)}
   body.underline-links button[onclick], body.underline-links .profile-item, body.underline-links .faq-q{text-decoration:underline}
   body.big-prices .product-price, body.big-prices .detail-price, body.big-prices .cart-item-price{font-size:1.3em!important;font-weight:900!important}
   body.simple-lang .logo-tagline::after{content:none}
-
-/* ========================================
-   RESPONSIVIDADE — TABLET & DESKTOP
-   ======================================== */
-
-/* ---- TABLET (600px – 1023px) ---- */
-@media (min-width: 600px) {
-  html, body { overflow: auto; }
-
-  #app {
-    max-width: 680px;
-    border-radius: 24px;
-    margin: 20px auto;
-    height: calc(100dvh - 40px);
-    box-shadow: 0 0 60px rgba(0,0,0,.22);
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    padding: 0 20px;
-  }
-
-  .cat-grid { grid-template-columns: repeat(6, 1fr); }
-
-  .detail-main-img { height: 360px; }
-  .product-img-wrap, .product-img { height: 180px; }
-
-  .home-header { padding-top: 32px; }
-  .topbar-inner { padding-top: 28px; }
-
-  .toast { bottom: 90px; }
-  .scroll-top-btn { bottom: 90px; }
-  .cart-footer { bottom: 64px; }
-}
-
-/* ---- DESKTOP (1024px +) ---- */
-@media (min-width: 1024px) {
-  html, body { overflow: auto; background: var(--surface); }
-
-  #app {
-    max-width: 1160px;
-    width: 96%;
-    border-radius: 20px;
-    margin: 24px auto;
-    height: calc(100dvh - 48px);
-    flex-direction: row;
-    box-shadow: 0 0 80px rgba(0,0,0,.18);
-  }
-
-  /* ---- SIDEBAR ---- */
-  .bottom-nav {
-    position: relative;
-    flex-direction: column;
-    width: 230px;
-    min-width: 230px;
-    height: 100%;
-    top: auto; bottom: auto; left: auto; right: auto;
-    border-top: none;
-    border-right: 1px solid var(--gray-200);
-    border-radius: 20px 0 0 20px;
-    justify-content: flex-start;
-    padding: 28px 0 16px;
-    gap: 2px;
-    overflow: hidden;
-    background: var(--white);
-  }
-
-  /* Logo no topo da sidebar */
-  .bottom-nav::before {
-    content: 'Nóbel';
-    display: block;
-    font-family: var(--font);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 0 20px 24px;
-    border-bottom: 1px solid var(--gray-200);
-    margin-bottom: 12px;
-    width: 100%;
-  }
-
-  .nav-btn {
-    flex: 0;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 13px 20px;
-    gap: 14px;
-    font-size: 14px;
-    border-radius: 12px;
-    margin: 0 12px;
-    width: calc(100% - 24px);
-  }
-
-  .nav-btn.active {
-    background: rgba(0,35,102,.07);
-    color: var(--primary);
-  }
-
-  .nav-btn .icon { font-size: 22px; }
-
-  .nav-badge {
-    position: static;
-    margin-left: auto;
-    width: 20px;
-    height: 20px;
-    font-size: 11px;
-  }
-
-  /* ---- MAIN CONTENT AREA ---- */
-  .screen {
-    flex: 1;
-    padding-bottom: 20px;
-    min-width: 0;
-    border-radius: 0 20px 20px 0;
-  }
-
-  /* home header sem status-bar gap extra */
-  .home-header { padding-top: 28px; }
-  .topbar-inner { padding-top: 20px; }
-
-  .product-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    padding: 0 24px;
-  }
-
-  .cat-grid { grid-template-columns: repeat(8, 1fr); }
-
-  .product-img-wrap, .product-img { height: 160px; }
-
-  .detail-main-img { height: 420px; }
-
-  .cart-footer { position: sticky; bottom: 0; }
-
-  .scroll-top-btn { bottom: 20px; right: 20px; }
-
-  /* Modal: centralizar sobre a área de conteúdo */
-  .modal-overlay { padding-left: 230px; }
-
-  .modal-sheet {
-    border-radius: 20px;
-    margin-bottom: 40px;
-    max-width: 560px;
-  }
-
-  /* Toast centrado na área de conteúdo */
-  .toast { left: calc(50% + 115px); bottom: 40px; }
-
-  /* Checkout em duas colunas */
-  .checkout-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    padding: 24px;
-    align-items: start;
-  }
-
-  .checkout-body > .btn-place-order {
-    grid-column: 1 / -1;
-  }
-}
-
-/* ---- WIDESCREEN (1400px +) ---- */
-@media (min-width: 1400px) {
-  #app { max-width: 1360px; }
-  .product-grid { grid-template-columns: repeat(5, 1fr); }
-}
-
 </style>
 </head>
 <body>
