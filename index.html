@@ -317,6 +317,34 @@ input:checked+.slider:before{transform:translateX(20px)}
   body.underline-links button[onclick], body.underline-links .profile-item, body.underline-links .faq-q{text-decoration:underline}
   body.big-prices .product-price, body.big-prices .detail-price, body.big-prices .cart-item-price{font-size:1.3em!important;font-weight:900!important}
   body.simple-lang .logo-tagline::after{content:none}
+
+/* ── RESPONSIVIDADE ── */
+/* TABLET (600px – 1023px) */
+@media (min-width:600px){
+  html,body{overflow:auto}
+  #app{max-width:680px;border-radius:24px;margin:20px auto;height:calc(100dvh - 40px)}
+  .product-grid{grid-template-columns:repeat(3,1fr)}
+  .cat-grid{grid-template-columns:repeat(6,1fr)}
+  .detail-main-img{height:360px}
+  .product-img-wrap,.product-img{height:180px}
+}
+/* DESKTOP (1024px+) */
+@media (min-width:1024px){
+  #app{max-width:1160px;width:96%;flex-direction:row;border-radius:20px;margin:24px auto}
+  .bottom-nav{position:relative;flex-direction:column;width:230px;min-width:230px;height:100%;border-top:none;border-right:1px solid var(--gray-200)}
+  .bottom-nav::before{content:'Nóbel';display:block;font-size:18px;font-weight:700;color:var(--white);padding:20px 20px 10px;letter-spacing:.5px}
+  .nav-btn{flex:0;flex-direction:row;justify-content:flex-start;padding:13px 20px;gap:12px}
+  .nav-label{display:block;font-size:14px}
+  .screen{flex:1;padding-bottom:20px}
+  .product-grid{grid-template-columns:repeat(4,1fr)}
+  .checkout-body{display:grid;grid-template-columns:1fr 1fr}
+}
+/* WIDESCREEN (1400px+) */
+@media (min-width:1400px){
+  #app{max-width:1360px}
+  .product-grid{grid-template-columns:repeat(5,1fr)}
+}
+
 </style>
 </head>
 <body>
