@@ -318,6 +318,177 @@ input:checked+.slider:before{transform:translateX(20px)}
   body.big-prices .product-price, body.big-prices .detail-price, body.big-prices .cart-item-price{font-size:1.3em!important;font-weight:900!important}
   body.simple-lang .logo-tagline::after{content:none}
 </style>
+
+/* ========================================
+   RESPONSIVIDADE — TABLET & DESKTOP
+   ======================================== */
+
+/* ---- TABLET (600px – 1023px) ---- */
+@media (min-width: 600px) {
+  html, body { overflow: auto; }
+
+  #app {
+    max-width: 680px;
+    border-radius: 24px;
+    margin: 20px auto;
+    height: calc(100dvh - 40px);
+    box-shadow: 0 0 60px rgba(0,0,0,.22);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 0 20px;
+  }
+
+  .cat-grid { grid-template-columns: repeat(6, 1fr); }
+
+  .detail-main-img { height: 360px; }
+  .product-img-wrap, .product-img { height: 180px; }
+
+  .home-header { padding-top: 32px; }
+  .topbar-inner { padding-top: 28px; }
+
+  .toast { bottom: 90px; }
+  .scroll-top-btn { bottom: 90px; }
+  .cart-footer { bottom: 64px; }
+}
+
+/* ---- DESKTOP (1024px +) ---- */
+@media (min-width: 1024px) {
+  html, body { overflow: auto; background: var(--surface); }
+
+  #app {
+    max-width: 1160px;
+    width: 96%;
+    border-radius: 20px;
+    margin: 24px auto;
+    height: calc(100dvh - 48px);
+    flex-direction: row;
+    box-shadow: 0 0 80px rgba(0,0,0,.18);
+  }
+
+  /* ---- SIDEBAR ---- */
+  .bottom-nav {
+    position: relative;
+    flex-direction: column;
+    width: 230px;
+    min-width: 230px;
+    height: 100%;
+    top: auto; bottom: auto; left: auto; right: auto;
+    border-top: none;
+    border-right: 1px solid var(--gray-200);
+    border-radius: 20px 0 0 20px;
+    justify-content: flex-start;
+    padding: 28px 0 16px;
+    gap: 2px;
+    overflow: hidden;
+    background: var(--white);
+  }
+
+  /* Logo no topo da sidebar */
+  .bottom-nav::before {
+    content: 'Nóbel';
+    display: block;
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 0 20px 24px;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .nav-btn {
+    flex: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 13px 20px;
+    gap: 14px;
+    font-size: 14px;
+    border-radius: 12px;
+    margin: 0 12px;
+    width: calc(100% - 24px);
+  }
+
+  .nav-btn.active {
+    background: rgba(0,35,102,.07);
+    color: var(--primary);
+  }
+
+  .nav-btn .icon { font-size: 22px; }
+
+  .nav-badge {
+    position: static;
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  /* ---- MAIN CONTENT AREA ---- */
+  .screen {
+    flex: 1;
+    padding-bottom: 20px;
+    min-width: 0;
+    border-radius: 0 20px 20px 0;
+  }
+
+  /* home header sem status-bar gap extra */
+  .home-header { padding-top: 28px; }
+  .topbar-inner { padding-top: 20px; }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 0 24px;
+  }
+
+  .cat-grid { grid-template-columns: repeat(8, 1fr); }
+
+  .product-img-wrap, .product-img { height: 160px; }
+
+  .detail-main-img { height: 420px; }
+
+  .cart-footer { position: sticky; bottom: 0; }
+
+  .scroll-top-btn { bottom: 20px; right: 20px; }
+
+  /* Modal: centralizar sobre a área de conteúdo */
+  .modal-overlay { padding-left: 230px; }
+
+  .modal-sheet {
+    border-radius: 20px;
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+
+  /* Toast centrado na área de conteúdo */
+  .toast { left: calc(50% + 115px); bottom: 40px; }
+
+  /* Checkout em duas colunas */
+  .checkout-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 24px;
+    align-items: start;
+  }
+
+  .checkout-body > .btn-place-order {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---- WIDESCREEN (1400px +) ---- */
+@media (min-width: 1400px) {
+  #app { max-width: 1360px; }
+  .product-grid { grid-template-columns: repeat(5, 1fr); }
+}
 </head>
 <body>
 <div id="app">
